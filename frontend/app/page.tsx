@@ -1,12 +1,32 @@
 'use client';
 
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Users, Handshake, DollarSign } from 'lucide-react';
 
 export default function Home() {
   return (
     <>
+      {/* Navbar */}
+      <header className="bg-white shadow-md sticky top-0 z-50">
+        <nav className="flex items-center justify-between px-6 md:px-20 py-4">
+          <Link href="/" className="text-2xl font-bold text-green-700">AYUSH Portal</Link>
+          <ul className="flex gap-6 text-gray-700 font-medium items-center">
+            <li><Link href="#about" className="hover:text-green-600">About</Link></li>
+            <li><Link href="#features" className="hover:text-green-600">Features</Link></li>
+            <li><Link href="#testimonials" className="hover:text-green-600">Testimonials</Link></li>
+            <li><Link href="#faq" className="hover:text-green-600">FAQ</Link></li>
+            <li>
+              <Link href="/signup">
+                <Button className="bg-green-600 hover:bg-green-700 text-white">Get Started</Button>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
       {/* Hero Section */}
       <section
         className="relative h-screen bg-cover bg-center"
@@ -22,8 +42,10 @@ export default function Home() {
               Boost your AYUSH startup with mentorship, funding, and networking support.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button className="bg-green-600 hover:bg-green-700" variant="ghost">Register Now</Button>
-              <Button variant="ghost" className="text-white border-white hover:bg-white hover:text-black">
+              <Link href="/signup">
+                <Button className="bg-green-600 hover:bg-green-700">Register Now</Button>
+              </Link>
+              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
                 Learn More
               </Button>
             </div>
@@ -72,8 +94,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-white px-6 md:px-20">
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white px-6 md:px-20" id="testimonials">
         <h2 className="text-3xl font-bold text-center mb-10">Testimonials</h2>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {[
@@ -97,6 +119,33 @@ export default function Home() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Accordion FAQ Section */}
+      <section className="py-20 bg-gray-50 px-6 md:px-20" id="faq">
+        <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Who can register on the AYUSH Startup Portal?</AccordionTrigger>
+              <AccordionContent>
+                Any individual or startup working in Ayurveda, Yoga, Unani, Siddha, or Homeopathy can register and benefit from the services.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Is there a registration fee?</AccordionTrigger>
+              <AccordionContent>
+                No, registering on the portal is completely free for all users.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>How can I connect with mentors?</AccordionTrigger>
+              <AccordionContent>
+                Once registered, you can browse mentor profiles and request mentorship through your dashboard.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
