@@ -3,19 +3,9 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import {
-  Card, CardContent
-} from '@/components/ui/card';
-import {
-  Accordion,AccordionContent,AccordionItem,AccordionTrigger
-} from '@/components/ui/accordion';
-import {
-  Users,
-  Handshake,
-  DollarSign,
-  Menu,
-  X
-} from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Users, Handshake, DollarSign, Menu, X } from 'lucide-react';
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,22 +15,18 @@ export default function Home() {
       {/* Navbar */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <nav className="flex items-center justify-between px-4 sm:px-6 md:px-20 py-4 relative">
-          <Link href="/" className="text-2xl font-bold text-green-700">
-            AYUSH Portal
-          </Link>
+          <Link href="/" className="text-2xl font-bold text-green-700">AYUSH Portal</Link>
 
           {/* Desktop Nav */}
           <ul className="hidden md:flex gap-6 text-gray-700 font-medium items-center">
             <li><Link href="#about" className="hover:text-green-600">About</Link></li>
             <li><Link href="#features" className="hover:text-green-600">Features</Link></li>
             <li><Link href="#testimonials" className="hover:text-green-600">Testimonials</Link></li>
-            <li><Link href="#faq" className="hover:text-green-600">Schemes</Link></li>
+            <li><Link href="/schemes" className="hover:text-green-600">Schemes</Link></li>
             <li><Link href="#faq" className="hover:text-green-600">FAQ</Link></li>
             <li>
               <Link href="/signup">
-                <Button className="bg-green-600 hover:bg-green-700 text-white text-sm sm:text-base">
-                  Get Started
-                </Button>
+                <Button className="bg-green-600 hover:bg-green-700 text-white text-sm sm:text-base">Get Started</Button>
               </Link>
             </li>
           </ul>
@@ -52,7 +38,7 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile Menu Dropdown */}
+          {/* Mobile Menu */}
           {mobileMenuOpen && (
             <ul className="absolute top-full left-0 w-full bg-white shadow-md text-center flex flex-col py-4 gap-4 z-40">
               <li><Link href="#about" onClick={() => setMobileMenuOpen(false)}>About</Link></li>
@@ -62,9 +48,7 @@ export default function Home() {
               <li><Link href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link></li>
               <li>
                 <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="bg-green-600 hover:bg-green-700 text-white w-40 mx-auto">
-                    Get Started
-                  </Button>
+                  <Button className="bg-green-600 hover:bg-green-700 text-white w-40 mx-auto">Get Started</Button>
                 </Link>
               </li>
             </ul>
@@ -72,40 +56,26 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section
-        className="relative min-h-screen bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.pexels.com/photos/105028/pexels-photo-105028.jpeg')",
-        }}
-      >
+      {/* Hero */}
+      <section className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://images.pexels.com/photos/105028/pexels-photo-105028.jpeg')" }}>
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
           <div className="text-center text-white px-4 max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Startup Portal for AYUSH
-            </h1>
-            <p className="text-lg sm:text-xl mb-8">
-              Boost your AYUSH startup with mentorship, funding, and networking support.
-            </p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Startup Portal for AYUSH</h1>
+            <p className="text-lg mb-8">Boost your AYUSH startup with mentorship, funding, and networking support.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/signup">
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  Register Now
-                </Button>
+                <Button className="bg-green-600 hover:bg-green-700 text-white">Register Now</Button>
               </Link>
               <Link href="#">
-                <Button variant="ghost" className="text-white border-white hover:bg-white hover:text-black">
-                  Learn More
-                </Button>
+                <Button variant="ghost" className="text-white border-white hover:bg-white hover:text-black">Learn More</Button>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-20 text-center" id="about">
+      {/* About */}
+      <section className="py-20 px-4 sm:px-6 md:px-20 text-center" id="about">
         <h2 className="text-3xl font-bold mb-6">About the Portal</h2>
         <p className="text-gray-700 text-lg max-w-3xl mx-auto">
           This portal is a one-stop platform created to uplift AYUSH (Ayurveda, Yoga, Unani, Siddha, and Homeopathy)
@@ -113,8 +83,8 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 sm:py-20 bg-gray-50 px-4 sm:px-6 md:px-20 text-center" id="features">
+      {/* Features */}
+      <section className="py-20 bg-gray-50 px-4 sm:px-6 md:px-20 text-center" id="features">
         <h2 className="text-3xl font-bold mb-12">Portal Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
@@ -145,8 +115,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 sm:py-20 bg-white px-4 sm:px-6 md:px-20" id="testimonials">
+      {/* Testimonials */}
+      <section className="py-20 bg-white px-4 sm:px-6 md:px-20" id="testimonials">
         <h2 className="text-3xl font-bold text-center mb-10">Testimonials</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {[
@@ -173,38 +143,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 sm:py-20 bg-gray-50 px-4 sm:px-6 md:px-20" id="faq">
+      {/* FAQ */}
+      <section className="py-20 bg-gray-50 px-4 sm:px-6 md:px-20" id="faq">
         <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-4">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Who can register on the AYUSH Startup Portal?</AccordionTrigger>
-              <AccordionContent>
-                Any individual or startup working in Ayurveda, Yoga, Unani, Siddha, or Homeopathy can register and benefit from the services.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Is there a registration fee?</AccordionTrigger>
-              <AccordionContent>
-                No, registering on the portal is completely free for all users.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>How can I connect with mentors?</AccordionTrigger>
-              <AccordionContent>
-                Once registered, you can browse mentor profiles and request mentorship through your dashboard.
-              </AccordionContent>
-            </AccordionItem>
+          <Accordion type="single" collapsible className="space-y-4">
+            {[
+              {
+                q: 'Who can register on the AYUSH Startup Portal?',
+                a: 'Any individual or startup working in Ayurveda, Yoga, Unani, Siddha, or Homeopathy can register and benefit from the services.',
+              },
+              {
+                q: 'Is there a registration fee?',
+                a: 'No, registering on the portal is completely free for all users.',
+              },
+              {
+                q: 'How can I connect with mentors?',
+                a: 'Once registered, you can browse mentor profiles and request mentorship through your dashboard.',
+              },
+              {
+                q: 'What kind of funding opportunities are available?',
+                a: 'The portal connects startups to government grants, seed funding, and private investors specializing in AYUSH sectors.',
+              },
+              {
+                q: 'Can I collaborate with other startups on this platform?',
+                a: 'Yes! The collaboration feature allows startups to network, share ideas, and form partnerships.',
+              },
+              {
+                q: 'Is mentorship only available online?',
+                a: 'Mentorship can be both virtual and in-person depending on mentor availability and location.',
+              },
+              {
+                q: 'How do I update my profile information?',
+                a: 'You can update your profile details anytime from the dashboard after logging in.',
+              },
+              {
+                q: 'Are there any eligibility criteria for accessing funding?',
+                a: 'Eligibility depends on the funding source. Each scheme will list its own requirements for application.',
+              },
+            ].map(({ q, a }, idx) => (
+              <AccordionItem key={idx} value={`item-${idx + 1}`}>
+                <AccordionTrigger>{q}</AccordionTrigger>
+                <AccordionContent>{a}</AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6 text-center">
-        <p className="mb-1 text-sm">© 2025 AYUSH Startup Portal</p>
-        <p className="text-xs">Backed by Ministry of AYUSH | Smart India Hackathon</p>
-      </footer>
     </>
   );
 }
