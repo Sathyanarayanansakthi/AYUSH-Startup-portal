@@ -12,9 +12,9 @@ export default function Page() {
         
         {/* Header */}
         <div className="flex items-center justify-between mb-4 z-10 relative">
-          <h3 className="font-bold text-2xl text-white">Auto Assist Hub</h3>
+          <h3 className="font-bold text-2xl text-green-700">Auto Assist Hub</h3>
           <Link href="/">
-            <Button variant="ghost" className="bg-black text-white px-7">
+            <Button variant="outline" className="bg-green-500 text-white px-7">
               ← Back To Home
             </Button>
           </Link>
@@ -23,7 +23,7 @@ export default function Page() {
         {/* Full-Height Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/car_signup.jpg"
+            src="/signin.jpg"
             alt="Scenic"
             layout="fill"
             objectFit="cover"
@@ -45,7 +45,7 @@ export default function Page() {
               <Input placeholder="Email" type="email" className="mb-3" />
               <Input placeholder="Password" type="password" className="mb-3" />
               <Input placeholder="Confirm Password" type="password" className="mb-3" />
-              <Button type="submit" variant="ghost" className="text-white bg-black p-2 w-full">Sign In</Button>
+              <Button type="submit" variant="ghost" className="text-white bg-green-500 p-2 w-full">Sign In</Button>
             </form>
 
             <p className="mt-5">Already Have an Account? <Link href="/signup" className="text-blue-700">Sign In</Link></p>

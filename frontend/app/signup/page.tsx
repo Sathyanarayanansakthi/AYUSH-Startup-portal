@@ -12,9 +12,9 @@ export default function Page() {
         
         {/* Header */}
         <div className="flex items-center justify-between mb-4 z-10 relative">
-          <h3 className="font-bold text-2xl text-white">Auto Assist Hub</h3>
+          <h3 className="font-bold text-2xl text-green-800">Auto Assist Hub</h3>
           <Link href="/">
-            <Button variant="ghost" className="bg-black text-white px-7">
+            <Button variant="ghost" className="bg-green-500 text-white px-7">
               ← Back To Home
             </Button>
           </Link>
@@ -23,7 +23,7 @@ export default function Page() {
         {/* Full-Height Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/car_login.jpg"
+            src="/signup.jpg"
             alt="Scenic"
             layout="fill"
             objectFit="cover"
@@ -34,7 +34,7 @@ export default function Page() {
       {/* Right Section (Form or other content) */}
       <div className="flex items-center justify-center p-10 bg-white">
         <div className="max-w-md w-full">
-          <h3 className="text-3xl font-semibold text-center mb-6">Create an Account</h3>
+          <h3 className="text-3xl font-semibold text-center mb-6">Sign Up to Account</h3>
 
           <div className="mb-3"> 
             <form>
@@ -42,7 +42,7 @@ export default function Page() {
               <Input placeholder="Password" type="password" className="mb-3" />
               <Input placeholder="Confirm Password" type="password" className="mb-3" />
               <Link href={"/dashboard"}>
-              <Button type="submit" variant="ghost" className="text-white bg-black p-2 w-full" >Sign Up</Button>
+              <Button type="submit" variant="ghost" className="text-white bg-green-500 p-2 w-full" >Sign Up</Button>
               </Link>
             </form>
 
