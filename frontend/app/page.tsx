@@ -47,7 +47,7 @@ export default function Home() {
               <li><Link href="/schemes" onClick={() => setMobileMenuOpen(false)}>Schemes</Link></li>
               <li><Link href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link></li>
               <li>
-                <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/signin" onClick={() => setMobileMenuOpen(false)}>
                   <Button className="bg-green-600 hover:bg-green-700 text-white w-40 mx-auto">Get Started</Button>
                 </Link>
               </li>
@@ -63,7 +63,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Startup Portal for AYUSH</h1>
             <p className="text-lg mb-8">Boost your AYUSH startup with mentorship, funding, and networking support.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/signup">
+              <Link href="/signin">
                 <Button className="bg-green-600 hover:bg-green-700 text-white">Register Now</Button>
               </Link>
               <Link href="#">
