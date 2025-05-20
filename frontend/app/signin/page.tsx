@@ -50,7 +50,7 @@ export default function Page() {
 
             <p className="mt-5">Already Have an Account? <Link href="/signup" className="text-blue-700">Sign In</Link></p>
             <p className="mt-5 text-center">or Continue with</p>
-            <Button variant="outline" className="p-2 mt-3 bg-red-700 text-white w-1/2">Sign In with Google</Button>
+            <Button variant="outline" className="p-2 mt-3 bg-red-700 text-white w-1/2 gap-3">Sign In with Google</Button>
             <Button variant="outline" className="p-2 mt-3 bg-black text-white w-1/2 gap-8 mb-5">Sign In with Apple</Button>
           </div>
         </div>
