@@ -13,6 +13,7 @@ export const hashPassword = async (password) =>{
     }
 }
 
+
 //Compare Password 
 
 export const comparePassword = async (password,hased) =>{
