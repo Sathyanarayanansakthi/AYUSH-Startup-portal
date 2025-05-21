@@ -32,7 +32,6 @@ export default function SignUpPage() {
             <Input placeholder="Name" type="text" className="mb-3" />
             <Input placeholder="Email" type="email" className="mb-3" />
             <Input placeholder="Password" type="password" className="mb-3" />
-            <Input placeholder="Confirm Password" type="password" className="mb-3" />
             <Button type="submit" variant="ghost" className="text-white bg-green-500 p-2 w-full">
               Sign Up
             </Button>
