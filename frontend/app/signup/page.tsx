@@ -9,7 +9,7 @@ export default function SignUpPage() {
       {/* Left Section */}
       <div className="hidden md:flex flex-col p-7 relative">
         <div className="flex items-center justify-between mb-4 z-10 relative">
-          <h3 className="font-bold text-2xl text-green-700">Auto Assist Hub</h3>
+          <h3 className="font-bold text-2xl text-green-700"></h3>
           <Link href="/">
             <Button variant="outline" className="bg-green-500 text-white px-7">
               ← Back To Home
